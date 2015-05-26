@@ -2,7 +2,7 @@
   <div class="col-sm-3 col-md-2 sidebar">
     <ul class="nav nav-sidebar">
       {{#each channels}}
-        <li><a href="#"># {{name}}</a></li>
+        <li><a href="{{pathFor route='channel'}}"># {{name}}</a></li>
       {{/each}}
     </ul>
   </div>

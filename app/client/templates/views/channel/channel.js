@@ -1,5 +1,7 @@
 Template.channel.helpers({
-  channelName: function() {
-    return Router.current().params.name;
+  channel: function() {
+    return Channels.findOne({
+      name: Router.current().params.name
+    });
   }
 });

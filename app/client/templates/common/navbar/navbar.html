@@ -12,6 +12,13 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
+          {{#if loggingIn}}
+            <li><p class="navbar-text">Signing in...</p></li>
+          {{else}}
+            {{#if currentUser}}
+              <li><p class="navbar-text">{{currentUser.username}}</p></li>
+            {{/if}}
+          {{/if}}
           <li>{{> atNavButton}}</li>
         </ul>
       </div>

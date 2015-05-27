@@ -5,15 +5,16 @@ function setMessagesHeight() {
     formHeight = $main.children('form').outerHeight(true),
     $messages = $main.children('.messages');
 
-  console.log(headerHeight);
-  console.log(formHeight);
-  console.log($(window).height());
-
-  $messages.css('height', ($(window).height() - navbarHeight - headerHeight - formHeight) + 'px');
+  $messages.css('height', ($(window).height() - navbarHeight - headerHeight - 
+    formHeight) + 'px');
 }
 
 Template.channel.onRendered(function() {
     setMessagesHeight();
+
+    $(window).resize(function() {
+      setMessagesHeight();
+    });
 });
 
 Template.channel.helpers({

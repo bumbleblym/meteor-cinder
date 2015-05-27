@@ -5,8 +5,6 @@ function setMessagesHeight() {
     formHeight = $main.children('form').outerHeight(true),
     $messages = $main.children('.messages');
 
-    console.log(headerHeight)
-
   $messages.css('height', ($(window).height() - navbarHeight - headerHeight - 
     formHeight) + 'px');
 }

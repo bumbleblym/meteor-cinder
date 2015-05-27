@@ -72,7 +72,8 @@ body {
  */
 
 .main {
-  padding: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 @media (min-width: 768px) {
   .main {
@@ -81,7 +82,19 @@ body {
   }
 }
 .main .page-header {
-  margin-top: 0;
+  margin: 0;
+}
+.main .page-header h1 {
+  margin: 0;
+}
+
+.main .messages {
+  margin: 0;
+  overflow-y: auto;
+}
+
+.main form {
+  padding-bottom: 10px;
 }
 
 

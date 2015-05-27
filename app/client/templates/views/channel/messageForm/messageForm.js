@@ -13,6 +13,9 @@ Template.messageForm.events({
         content: content,
         createdAt: new Date()
       });
+
+      var $messages =  $('.main .messages');
+      $messages.scrollTop($messages[0].scrollHeight);
     }
   }
 });

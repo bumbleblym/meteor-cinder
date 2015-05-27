@@ -18,8 +18,8 @@ Template.channel.onRendered(function() {
       setMessagesHeight();
     });
 
-    var $messages =  $('.main .messages')[0];
-    $messages.scrollTop($messages.scrollHeight);
+    var $messages =  $('.main .messages');
+    $messages.scrollTop($messages[0].scrollHeight);
 });
 
 Template.channel.helpers({

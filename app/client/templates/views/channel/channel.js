@@ -1,9 +1,11 @@
 function setMessagesHeight() {
   var navbarHeight = 50,
     $main = $('.main'),
-    headerHeight = 50,
+    headerHeight = $main.children('.page-header').outerHeight(true),
     formHeight = $main.children('form').outerHeight(true),
     $messages = $main.children('.messages');
+
+    console.log(headerHeight)
 
   $messages.css('height', ($(window).height() - navbarHeight - headerHeight - 
     formHeight) + 'px');
@@ -15,6 +17,9 @@ Template.channel.onRendered(function() {
     $(window).resize(function() {
       setMessagesHeight();
     });
+
+    var $messages =  $('.main .messages')[0];
+    $messages.scrollTop($messages.scrollHeight);
 });
 
 Template.channel.helpers({

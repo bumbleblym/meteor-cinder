@@ -72,16 +72,11 @@ body {
  */
 
 .main {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-@media (min-width: 768px) {
-  .main {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
+  padding: 0;
 }
 .main .page-header {
+  padding: 10px;
+  height: 60px;
   margin: 0;
 }
 .main .page-header h1 {
@@ -89,12 +84,14 @@ body {
 }
 
 .main .messages {
+  padding-left: 10px;
   margin: 0;
   overflow-y: auto;
 }
 
 .main form {
-  padding-bottom: 10px;
+  padding: 10px;
+  border-top: 1px solid #EEE;
 }
 
 
